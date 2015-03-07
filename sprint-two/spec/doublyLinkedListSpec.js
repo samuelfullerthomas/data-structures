@@ -1,6 +1,5 @@
 describe('doublyLinkedList', function() {
   beforeEach(function() {
-    debugger
     doublyLinkedList = dLL();
   });
 
@@ -25,7 +24,7 @@ describe('doublyLinkedList', function() {
   });
 
   it('should designate a new head when new nodes are added to the head', function(){
-    doublyLinkedList.addtoHead(4);
+    doublyLinkedList.addToHead(4);
     expect(doublyLinkedList.head.value).to.equal(4);
     doublyLinkedList.addToHead(5);
     expect(doublyLinkedList.head.value).to.equal(5);
