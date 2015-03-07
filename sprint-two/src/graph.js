@@ -65,7 +65,13 @@ var graphNode = function(value){
 
 /*
  * Complexity: What is the time complexity of the above functions?
- *O(n)
+ * addNode = constant
+ * removeNode = O(n)
+ * hasEdge = constant
+ * addEdge = O(n)
+ * removeEdge = O(n)
+ * forEachNode = O(n)
+ * 
  */
 
 

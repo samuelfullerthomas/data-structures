@@ -49,4 +49,7 @@ BSTMethods.depthFirstLog = function(callback){
 
 /*
  * Complexity: What is the time complexity of the above functions?
+ INSERT = O(log(n))
+ CONTAINS = O(log(n))
+ DFL = O(n)
  */
