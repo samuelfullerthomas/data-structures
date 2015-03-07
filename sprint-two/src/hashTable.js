@@ -6,12 +6,11 @@ var HashTable = function(){
 
 HashTable.prototype.insert = function(k, v){
   var i = getIndexBelowMaxForKey(k, this._limit);
-  var valueAtK = this._storage.get(i)
-  if (Array.isArray(valueAtK)) {
-  	var insertedArray = this._storage.get(i)
-  	insertedArray.push(k)
-  	insertedArray.push(v)
-  	this._storage.set(i, insertedArray)
+  if (Array.isArray(this._storage.get(i))) {
+  	var tempArray = this._storage.get(i)
+  	tempArray.push(k)
+  	tempArray.push(v)
+  	this._storage.set(i, tempArray)
   }
   else{
   	var value = []
@@ -22,7 +21,6 @@ HashTable.prototype.insert = function(k, v){
 };
 
 HashTable.prototype.retrieve = function(k){
-	debugger
   var i = getIndexBelowMaxForKey(k, this._limit);
   var tempArray = this._storage.get(i)
   for (var x = 0; x < tempArray.length; x++){
