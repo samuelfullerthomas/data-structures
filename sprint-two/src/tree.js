@@ -23,16 +23,15 @@ treeMethods.addChild = function(value){
 }
 
 treeMethods.contains = function(target){
-	debugger
 	if (this.value === target) {
 		return true
 	}
-	else if (this.children.length > 0){
-		for(var i = 0; i < this.children.length; i++){
-			return this.children[i].contains(target)
-			}
+	for(var i = 0; i < this.children.length; i++){
+		var result = this.children[i].contains(target)
+		if (result === true){
+			return result
 		}
-
+	}
 	return false
 }
 
